@@ -23,15 +23,15 @@ function BrokerageNetwork() {
     <section className="bg-mist pt-16 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 lg:pb-16">
       <div className="container-site">
         <Reveal><SectionHeading eyebrow="Our Brokerage Network" title="Connecting the entire textile value chain." align="center" /></Reveal>
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 relative z-10">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 relative z-10">
           {network.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.1} className="relative group">
-              <div className="bg-white rounded-3xl p-5 sm:p-6 w-full h-full text-center shadow-card border border-gray-200 transition-all duration-300 hover:shadow-gold hover:-translate-y-2 relative z-20 flex flex-col justify-center">
-                <h3 className="font-display text-xl font-bold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm text-gray-500">{item.desc}</p>
+            <Reveal key={item.title} delay={i * 0.1} className="relative group flex justify-center">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-sm h-full text-center shadow-card border border-gray-200 transition-all duration-300 hover:shadow-gold hover:-translate-y-2 relative z-20 flex flex-col justify-center">
+                <h3 className="font-display text-[22px] sm:text-2xl lg:text-[32px] leading-tight font-bold text-ink">{item.title}</h3>
+                <p className="mt-2 sm:mt-3 text-[16px] leading-relaxed text-gray-500">{item.desc}</p>
               </div>
               {i < network.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-8 w-8 h-px bg-gold-dark z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-6 w-6 h-px bg-gold-dark z-10">
                   <ArrowRight size={16} className="absolute -right-2 -top-2 text-gold-dark" />
                 </div>
               )}

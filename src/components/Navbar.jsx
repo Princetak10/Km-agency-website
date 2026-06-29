@@ -24,14 +24,13 @@ export default function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-sm backdrop-blur-xl py-0' : 'bg-white/95 py-2'}`}>
       <nav className="container-site flex h-[90px] items-center justify-between" aria-label="Main navigation">
         <Link to="/" className="group flex items-center gap-2 sm:gap-3 flex-nowrap" aria-label="Krishna Madhav Agency home">
-          <img src={logo} alt="" className="h-10 w-10 sm:h-[68px] sm:w-[68px] object-contain transition-transform duration-500 group-hover:scale-105 shrink-0" />
+          <img src={logo} alt="" className="h-12 w-12 sm:h-[68px] sm:w-[68px] object-contain transition-transform duration-500 group-hover:scale-105 shrink-0" />
           <span className="leading-none whitespace-nowrap">
-            <div className="flex items-center whitespace-nowrap sm:flex-col sm:items-start">
-              <span className="font-display text-[16px] font-extrabold tracking-[-0.02em] text-ink sm:text-[16px]">
+            <div className="flex flex-row items-baseline sm:flex-col sm:items-start">
+              <span className="font-display text-[13px] sm:text-[16px] font-extrabold tracking-[-0.02em] text-ink">
                 KRISHNA MADHAV
               </span>
-
-              <span className="ml-1 text-[11.5px] font-bold tracking-[0.23em] text-gold-dark sm:ml-0 sm:mt-1 sm:text-[10px]">
+              <span className="ml-1 sm:ml-0 sm:mt-1 text-[9px] sm:text-[10px] font-bold tracking-[0.23em] text-gold-dark">
                 AGENCY
               </span>
             </div>
