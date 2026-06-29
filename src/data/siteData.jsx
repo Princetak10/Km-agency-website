@@ -16,12 +16,12 @@ export const services = [
 // Product photos updated with high-quality textile-related images
 export const products = [
   { title: 'Sarees', type: 'Traditional • Contemporary', image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=82' },
-  { title: 'Bridal Sarees', type: 'Wedding • Occasion Wear', image: 'https://images.unsplash.com/photo-1583391733958-d2597280170a?auto=format&fit=crop&w=900&q=82' },
+  { title: 'Bridal Sarees', type: 'Wedding • Occasion Wear', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=82' },
   { title: 'Silk Sarees', type: 'Premium • Authentic', image: 'https://images.unsplash.com/photo-1589465885857-44edb59bbff2?auto=format&fit=crop&w=900&q=82' },
   { title: 'Cotton Sarees', type: 'Everyday • Comfortable', image: 'https://images.unsplash.com/photo-1615886753866-79396abc446e?auto=format&fit=crop&w=900&q=82' },
   { title: 'Designer Suits', type: 'Elegant • Stylish', image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=82' },
   { title: 'Dress Materials', type: 'Unstitched • Versatile', image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=900&q=82' },
-  { title: 'Lehengas', type: 'Festive • Bridal', image: 'https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=900&q=82' },
+  { title: 'Bridal Lehengas', type: 'Festive • Bridal', image: 'https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=900&q=82' },
   { title: 'Kurti Fabrics', type: 'Printed • Solid', image: 'https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?auto=format&fit=crop&w=900&q=82' },
   { title: 'Cotton Fabric', type: 'Breathable • Woven', image: 'https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?auto=format&fit=crop&w=900&q=82' },
   { title: 'Silk Fabric', type: 'Luxurious • Soft', image: 'https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=900&q=82' },
@@ -75,10 +75,10 @@ export const gallery = [
 ]
 
 export const stats = [
-  { value: 3, suffix: '', label: 'Cities served' },
-  { value: 3, suffix: '', label: 'Office locations' },
-  { value: 5, suffix: '', label: 'Product categories' },
-  { value: 2, suffix: '', label: 'Direct contacts' },
+  { value: 15, suffix: '+', label: 'Years Experience' },
+  { value: 500, suffix: '+', label: 'Clients' },
+  { value: 200, suffix: '+', label: 'Manufacturing Partners' },
+  { value: 1000, suffix: '+', label: 'Orders Coordinated' },
 ]
 
 export const values = [

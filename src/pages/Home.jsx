@@ -11,6 +11,55 @@ import { features, gallery, industries, process, products, services, stats, test
 
 import HeroCarousel from '../components/HeroCarousel'
 
+function BrokerageNetwork() {
+  const network = [
+    { title: 'Manufacturers', desc: 'Direct sourcing from mills' },
+    { title: 'Wholesalers', desc: 'Volume supply chain' },
+    { title: 'Exporters', desc: 'International trade support' },
+    { title: 'Retailers', desc: 'Premium store supply' },
+    { title: 'Fashion Brands', desc: 'Custom fabric requirements' },
+  ]
+  return (
+    <section className="bg-mist pt-16 sm:pt-24 lg:pt-32 pb-8 sm:pb-12 lg:pb-16">
+      <div className="container-site">
+        <Reveal><SectionHeading eyebrow="Our Brokerage Network" title="Connecting the entire textile value chain." align="center" /></Reveal>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 relative z-10">
+          {network.map((item, i) => (
+            <Reveal key={item.title} delay={i * 0.1} className="relative group">
+              <div className="bg-white rounded-3xl p-5 sm:p-6 w-full h-full text-center shadow-card border border-gray-200 transition-all duration-300 hover:shadow-gold hover:-translate-y-2 relative z-20 flex flex-col justify-center">
+                <h3 className="font-display text-xl font-bold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm text-gray-500">{item.desc}</p>
+              </div>
+              {i < network.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-8 w-8 h-px bg-gold-dark z-10">
+                  <ArrowRight size={16} className="absolute -right-2 -top-2 text-gold-dark" />
+                </div>
+              )}
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Statistics() {
+  return (
+    <section className="section-space bg-ink text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-weave bg-[size:32px_32px] opacity-20" />
+      <div className="container-site relative z-10">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 divide-x divide-white/10 text-center">
+          {stats.map((s, i) => (
+            <Reveal key={s.label} delay={i * 0.1}>
+              <StatCounter value={s.value} suffix={s.suffix} label={s.label} dark />
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function AboutPreview() {
   return (
     <section className="section-space overflow-hidden">
@@ -18,10 +67,10 @@ function AboutPreview() {
         <Reveal className="relative">
           <div className="absolute -left-8 -top-8 h-44 w-44 rounded-full bg-gold-light/40 blur-3xl" />
           <div className="relative grid grid-cols-[1fr_.68fr] gap-4">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85" alt="Textile machinery in operation" className="h-[430px] w-full rounded-[2rem] object-cover shadow-soft sm:h-[540px]" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85" alt="Textile machinery in operation" className="h-[340px] sm:h-[430px] lg:h-[540px] w-full rounded-[2rem] object-cover object-center shadow-soft" loading="lazy" />
             <div className="flex flex-col gap-4 pt-12">
-              <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=700&q=85" alt="Detailed woven fabric" className="h-48 w-full rounded-3xl object-cover sm:h-60" loading="lazy" />
-              <div className="rounded-3xl bg-gold p-5 text-ink sm:p-7"><p className="font-display text-3xl font-extrabold sm:text-4xl">3 Cities</p><p className="mt-1 text-xs font-bold uppercase tracking-wider">Surat • Delhi • Jaipur</p></div>
+              <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=700&q=85" alt="Detailed woven fabric" className="h-32 sm:h-48 lg:h-60 w-full rounded-3xl object-cover object-center" loading="lazy" />
+              <div className="rounded-3xl bg-gold p-4 sm:p-5 lg:p-7"><p className="font-display text-2xl font-extrabold sm:text-3xl lg:text-4xl">3 cities & 24+ States</p><p className="mt-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">Serving clients across India.</p></div>
             </div>
           </div>
         </Reveal>
@@ -40,7 +89,7 @@ function AboutPreview() {
 
 function ServicesPreview() {
   return (
-    <section className="section-space bg-mist">
+    <section className="bg-mist pb-16 sm:pb-24 lg:pb-32 pt-8 sm:pt-12 lg:pt-16">
       <div className="container-site">
         <Reveal><SectionHeading eyebrow="What we do" title="A capable partner across the entire fabric journey." text="From the first brief to the final dispatch, we bring market intelligence and calm coordination to every stage." align="center" /></Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -105,11 +154,11 @@ function Testimonials() {
 function Gallery() {
   return (
     <section className="pb-20 sm:pb-24 lg:pb-28">
-      <div className="container-site"><Reveal><div className="flex items-end justify-between gap-6"><SectionHeading eyebrow="From the textile floor" title="Texture, craft and capability." /><p className="hidden max-w-xs text-right text-sm leading-6 text-slate-500 md:block">A glimpse into the materials, making and people behind every successful order.</p></div></Reveal><div className="mt-10 columns-2 gap-4 lg:columns-3">{gallery.map((image, i) => <Reveal key={image.src} delay={(i % 3) * .05} className="mb-4 break-inside-avoid"><div className="group overflow-hidden rounded-2xl bg-slate-100"><img src={image.src} alt={image.alt} loading="lazy" className={`w-full object-cover transition duration-700 group-hover:scale-105 ${image.size === 'tall' ? 'h-72 sm:h-[430px]' : 'h-44 sm:h-64'}`} /></div></Reveal>)}</div></div>
+      <div className="container-site"><Reveal><div className="flex items-end justify-between gap-6"><SectionHeading eyebrow="From the textile floor" title="Texture, craft and capability." /><p className="hidden max-w-xs text-right text-[16px] leading-[1.6] text-gray-500 md:block">A glimpse into the materials, making and people behind every successful order.</p></div></Reveal><div className="mt-12 columns-2 gap-4 lg:columns-3">{gallery.map((image, i) => <Reveal key={image.src} delay={(i % 3) * .05} className="mb-4 break-inside-avoid"><div className="group relative overflow-hidden rounded-3xl bg-slate-100 shadow-card transition-shadow duration-500 hover:shadow-gold"><img src={image.src} alt={image.alt} loading="lazy" className={`w-full object-cover object-center transition-transform duration-[1.5s] group-hover:scale-[1.15] ${image.size === 'tall' ? 'h-72 sm:h-[430px]' : 'h-44 sm:h-64'}`} /><div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" /></div></Reveal>)}</div></div>
     </section>
   )
 }
 
 export default function Home() {
-  return <motion.main id="main-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}><SEO title="Textile Commission Agent" description="Krishna Madhav Agency deals in sarees, lehengas, suits, readymade garments and garments across Surat, Delhi and Jaipur." /><HeroCarousel /><AboutPreview /><ServicesPreview /><ProductsPreview /><WhyUs /><Industries /><Process /><Testimonials /><Gallery /><ContactSection compact /></motion.main>
+  return <motion.main id="main-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}><SEO title="Textile Commission Agent" description="Krishna Madhav Agency deals in sarees, lehengas, suits, readymade garments and garments across Surat, Delhi and Jaipur." /><HeroCarousel /><AboutPreview /><BrokerageNetwork /><ServicesPreview /><ProductsPreview /><WhyUs /><Statistics /><Process /><Testimonials /><Gallery /><ContactSection compact /></motion.main>
 }
